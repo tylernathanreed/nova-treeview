@@ -41,3 +41,5 @@ Here's the basic syntax:
 Which will result in the following:
 
 ![Example](/screenshots/example.png?raw=true "Example")
+
+By clicking the "Resources" label, you will expand the resources portion of the sidebar.
