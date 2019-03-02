@@ -119,4 +119,4 @@ Additionally, you can nest treeviews within treeviews. Here's an example using t
 
 This will result in the following:
 
-![Resource Group Example](/screenshots/resource-example.gif?raw=true "Resource Group Example")
+![Resource Group Example](/screenshots/resource-group-example.gif?raw=true "Resource Group Example")
