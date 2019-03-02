@@ -43,3 +43,5 @@ Which will result in the following:
 ![Example](/screenshots/example.png?raw=true "Example")
 
 By clicking the "Resources" label, you will expand the resources portion of the sidebar.
+
+You can use the treeview anywhere in the sidebar (it doesn't have to be specifically for resources). Additionally, you can nest treeviews within treeviews.
