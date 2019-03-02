@@ -69,7 +69,7 @@ Here's what the treeview would look like if applied to resource navigation:
 
 Which will result in the following:
 
-![Example](/screenshots/resource-example.gif?raw=true "Resource Example")
+![Resource Example](/screenshots/resource-example.gif?raw=true "Resource Example")
 
 By clicking the "Resources" label, you will expand the resources portion of the sidebar. Just remember, you can use the treeview anywhere in the sidebar (it doesn't have to be specifically for resources).
 
@@ -116,3 +116,7 @@ Additionally, you can nest treeviews within treeviews. Here's an example using t
     </treeview>
 @endif
 ```
+
+This will result in the following:
+
+![Resource Group Example](/screenshots/resource-example.gif?raw=true "Resource Group Example")
