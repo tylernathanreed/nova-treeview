@@ -21,13 +21,13 @@ This packages creates a new `<treeview>` Vue component that can be used within y
 Here's the basic syntax:
 
 ```html
-<treeview tag="li" toggle-tag="h3" toggle-class="sidebar-link dim">
+<treeview tag="div" toggle-tag="h3" toggle-class="cursor-pointer flex items-center font-normal dim text-white mb-6 text-base no-underline">
   <template slot="label">
     <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
       <!-- Some icon -->
     </svg>
 
-    <span class="text-white sidebar-label">
+    <span class="sidebar-label flex-1">
         {{ __('Resources') }}
     </span>
   </template>
