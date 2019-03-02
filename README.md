@@ -21,21 +21,46 @@ This packages creates a new `<treeview>` Vue component that can be used within y
 Here's the basic syntax:
 
 ```html
-<treeview tag="div" toggle-tag="h3" toggle-class="cursor-pointer flex items-center font-normal dim text-white mb-6 text-base no-underline">
+<treeview tag="div" class="" toggle-tag="h3" toggle-class="flex items-center cursor-pointer">
   <template slot="label">
-    <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-      <!-- Some icon -->
-    </svg>
-
-    <span class="sidebar-label flex-1">
-        {{ __('Resources') }}
-    </span>
+    <!-- Some label -->
   </template>
 
   <template slot="menu">
     <!-- Something to optionally display -->
   <template>
 </treeview>
+```
+
+Here's what the treeview would look like if applied to resource navigation:
+
+```html
+@if(count(Nova::availableResources(request())))
+    <treeview tag="div" toggle-tag="h3" toggle-class="cursor-pointer flex items-center font-normal dim text-white mb-6 text-base no-underline">
+        <template slot="label">
+            <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <!-- Resources Label -->
+            </svg>
+            <span class="sidebar-label flex-1">{{ __('Resources') }}</span>
+        </template>
+
+        <template slot="menu">
+            @foreach($navigation as $group => $resources)
+                @if(count($groups) > 1)
+                    <h4 class="ml-8 mb-4 text-xs text-white-50% uppercase tracking-wide">{{ $group }}</h4>
+                @endif
+
+                <ul class="list-reset mb-8">
+                    @foreach($resources as $resource)
+                        <li class="leading-tight mb-4 ml-8 text-sm">
+                            <!-- Link to each Resource -->
+                        </li>
+                    @endforeach
+                </ul>
+            @endforeach
+        </template>
+    </treeview>
+@endif
 ```
 
 Which will result in the following:
